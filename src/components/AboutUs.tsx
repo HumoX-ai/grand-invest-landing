@@ -18,7 +18,7 @@ const AboutUs = () => {
         animate={isInView ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 1, delay: 0.5 }}
       >
-        <img src="/public/aboutus.svg" alt="" />
+        <img src="/aboutus.svg" alt="" />
       </motion.div>
       <motion.div
         className="text-center md:text-start"

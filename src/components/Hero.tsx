@@ -51,7 +51,7 @@ const Hero = () => {
           transition={{ duration: 1, ease: "easeInOut" }}
         >
           {/* <div className="absolute inset-0 backdrop-blur-sm bg-white/30"></div> */}
-          <img src="/public/team.svg" alt="" className="relative" />
+          <img src="/team.svg" alt="" className="relative" />
         </motion.div>
       </div>
     </div>
