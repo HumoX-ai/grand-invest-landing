@@ -14,15 +14,15 @@ const AboutUs = () => {
       ref={ref}
     >
       <motion.div
-        initial={{ opacity: 0, x: -100 }}
+        initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 1, delay: 0.5 }}
       >
-        <img src="../../public/aboutus.svg" alt="" />
+        <img src="/public/aboutus.svg" alt="" />
       </motion.div>
       <motion.div
         className="text-center md:text-start"
-        initial={{ opacity: 0, x: 100 }}
+        initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 1, delay: 1 }}
       >

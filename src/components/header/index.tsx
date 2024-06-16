@@ -93,11 +93,7 @@ const Header = () => {
         onClick={() => setOpen(!open)}
         size={28}
       />
-      <img
-        src="../../../public/logo.svg"
-        alt="Logo"
-        className="h-10 md:h-full"
-      />
+      <img src="/public/logo.svg" alt="Logo" className="h-10 md:h-full" />
       <NavigationMenu className="hidden xl:flex">
         <NavigationMenuList className="flex gap-4">
           {navItems.map((item) => (
@@ -202,31 +198,19 @@ const Header = () => {
           <SelectContent>
             <SelectItem value="uz">
               <div className="flex gap-2 items-center justify-center">
-                <img
-                  src="../../../public/uz.svg"
-                  alt="Uzbek"
-                  className="w-6 h-6"
-                />
+                <img src="/public/uz.svg" alt="Uzbek" className="w-6 h-6" />
                 <p>uz</p>
               </div>
             </SelectItem>
             <SelectItem value="ru">
               <div className="flex gap-2 items-center justify-center">
-                <img
-                  src="../../../public/ru.svg"
-                  alt="Russian"
-                  className="w-6 h-6"
-                />
+                <img src="/public/ru.svg" alt="Russian" className="w-6 h-6" />
                 <p>ru</p>
               </div>
             </SelectItem>
             <SelectItem value="en">
               <div className="flex gap-2 items-center justify-center">
-                <img
-                  src="../../../public/en.svg"
-                  alt="English"
-                  className="w-6 h-6"
-                />
+                <img src="/public/en.svg" alt="English" className="w-6 h-6" />
                 <p>en</p>
               </div>
             </SelectItem>

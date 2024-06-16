@@ -4,7 +4,6 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/pagination";
 import "swiper/css/autoplay";
-import "../../public/exchange_bg.png";
 
 import axios from "axios";
 
@@ -100,7 +99,7 @@ export default function ExchangeRate() {
           ))}
         </Swiper>
       </div>
-      <div className="bg-[url('../../public/exchange_bg.png')] py-4 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 px-6 md:px-12 2xl:px-[140px] text-center gap-6 text-white items-center">
+      <div className="bg-[url('/public/exchange_bg.png')] py-4 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 px-6 md:px-12 2xl:px-[140px] text-center gap-6 text-white items-center">
         <div className="col-span-1">
           <h1 className="text-4xl lg:text-4xl font-medium">$ 2 000 000</h1>
           <p className="pt-1">{t("exChangeRate.title1")}</p>
