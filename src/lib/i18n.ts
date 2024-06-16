@@ -36,9 +36,6 @@ i18n
             },
             blog: "Blog",
             contacts: "Aloqa",
-            dark: "Qorong'u",
-            light: "Yorug'",
-            system: "Sistema",
             login: "Kirish",
           },
           hero: {
@@ -49,6 +46,22 @@ i18n
             subtitle:
               "Eng zamonaviy vositalar va mutaxassislarni qo'llab-quvvatlash uchun etakchi Forex savdo platformasiga qo'shiling",
             button: "Hoziroq boshlash",
+          },
+          exChangeRate: {
+            title1: "Kapitalni boshqarish",
+            title2: "Har bir savdodan foyda",
+            title3: "Barqaror daromadga ega bo'lgan mamnun talabalar",
+          },
+          aboutUs: {
+            whatwedo: "Biz nima qilamiz",
+            title: "Forex savdo tajribamiz bilan tanishing",
+            subtitle:
+              "Bizning vazifamiz barcha darajadagi treyderlarga o'z potentsialini maksimal darajada oshirish imkonini beradigan xavfsiz va foydalanuvchilarga qulay platformani taqdim etishdir.",
+            subtitle2:
+              "Tajribali mutaxassislar jamoasi va ilg'or texnologiyalar bilan biz keng qamrovli savdo yechimlari, ta'lim resurslari va shaxsiy yordamni taklif etamiz.",
+            subtitle3:
+              "Bizga qo'shiling, bag'ishlangan va professional savdo hamkori yarata oladigan farqni his qiling.",
+            button: "Hoziroq qo'shiling",
           },
         },
       },
@@ -71,9 +84,6 @@ i18n
             },
             blog: "Блог",
             contacts: "Контакты",
-            dark: "Темная",
-            light: "Светлая",
-            system: "Система",
             login: "Вход",
           },
           hero: {
@@ -84,6 +94,22 @@ i18n
             subtitle:
               "Присоединяйтесь к ведущей торговой платформе Форекс, чтобы получить доступ к новейшим инструментам и экспертной поддержке.",
             button: "Начать сейчас",
+          },
+          exChangeRate: {
+            title1: "Управляйте капиталом до",
+            title2: "Прибыль от каждой сделки",
+            title3: "Довольные студенты со стабильным доходом",
+          },
+          aboutUs: {
+            whatwedo: "Что мы делаем",
+            title: "Откройте для себя наш опыт торговли на Форекс",
+            subtitle:
+              "Наша миссия — предоставить безопасную и удобную для пользователя платформу, которая позволит трейдерам всех уровней максимизировать свой потенциал.",
+            subtitle2:
+              "Благодаря команде опытных профессионалов и новейшим технологиям мы предлагаем комплексные торговые решения, образовательные ресурсы и индивидуальную поддержку.",
+            subtitle3:
+              "Присоединяйтесь к нам и почувствуйте разницу, которую может сделать преданный своему делу и профессиональный торговый партнер.",
+            button: "Присоединяйся сейчас",
           },
         },
       },
@@ -106,9 +132,6 @@ i18n
             },
             blog: "Blog",
             contacts: "Contacts",
-            dark: "Dark",
-            light: "Light",
-            system: "System",
             login: "Login",
           },
           hero: {
@@ -119,6 +142,22 @@ i18n
             subtitle:
               "Join the Leading Forex Trading Platform for Cutting-Edge Tools and Expert Support",
             button: "Get Started",
+          },
+          exChangeRate: {
+            title1: "Manage capital up to",
+            title2: "Profit by every trade",
+            title3: "Satisfied students with stable income",
+          },
+          aboutUs: {
+            whatwedo: "What we do",
+            title: "Discover Our Forex Trading Experience",
+            subtitle:
+              "Our mission is to provide a secure and user-friendly platform that enables traders of all levels to maximize their potential.",
+            subtitle2:
+              " With a team of experienced professionals and cutting-edge technology,we offer comprehensive trading solutions, educational resources, and personalized support.",
+            subtitle3:
+              "Join us and experience the difference that a dedicated and professional trading partner can make.",
+            button: "Join Now",
           },
         },
       },

@@ -83,7 +83,7 @@ const Header = () => {
 
   return (
     <motion.div
-      className="pt-4 flex items-center justify-between"
+      className="pt-4 flex items-center justify-between px-6 md:px-12 2xl:px-[140px]"
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
