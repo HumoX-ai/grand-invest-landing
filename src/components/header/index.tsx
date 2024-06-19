@@ -217,7 +217,7 @@ const Header = () => {
           </SelectContent>
         </Select>
 
-        <Button className="bg-[#EA9C14] hover:bg-[#EA9C14] px-8 rounded-3xl hidden xl:flex">
+        <Button className="bg-gradient-light-right px-8 rounded-3xl hidden xl:flex">
           {t("header.login")}
         </Button>
       </div>
@@ -292,7 +292,7 @@ const Header = () => {
               </div>
             ))}
           </div>
-          <Button className="bg-[#EA9C14] hover:bg-[#EA9C14] px-8 rounded-3xl xl:hidden flex w-full mt-6">
+          <Button className="bg-gradient-light px-8 rounded-3xl xl:hidden flex w-full mt-6">
             {t("header.login")}
           </Button>
         </SheetContent>

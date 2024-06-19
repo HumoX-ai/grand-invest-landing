@@ -63,6 +63,44 @@ i18n
               "Bizga qo'shiling, bag'ishlangan va professional savdo hamkori yarata oladigan farqni his qiling.",
             button: "Hoziroq qo'shiling",
           },
+          products: {
+            span: "Mahsulotlarimiz",
+            title: "Trading kurslari",
+            title2: "Robotlarimiz yordami",
+            subtitle:
+              "Moliyaviy salohiyatingizni ishga soling: yangi boshlanuvchilar va tajribali treyderlar uchun moʻljallangan keng qamrovli kurslar bilan ishonch va mahorat bilan savdo qilishni oʻrganing.",
+            button: "Batafsil",
+          },
+          signals: {
+            title: "Signallar",
+            free: {
+              title: "Bepul",
+              price: "$0",
+              feature_1: "Asosiy signallar",
+              feature_2: "Oddiy diagrammalar va ko'rsatkichlar",
+              feature_3: "Asosiy qo'llanmalar va qo'llanmalar",
+              feature_4: "Jamoa forumlari yoki guruhlarida ishtirok etish",
+              feature_5: "Moslashtirish va ogohlantirishlar",
+              feature_6: "Reklama yo'q",
+              button: "Rejani tanlang",
+            },
+            premium: {
+              title: "Premium",
+              price: "$100",
+              feature_1: "Cheksiz signallar",
+              feature_2: "Kengaytirilgan tahlil vositalari",
+              feature_3: "Murakkab darsliklar, kurslar va vebinarlar",
+              feature_4:
+                "Premium forumlar, chat xonalari va ijtimoiy savdo xususiyatlariga kirish",
+              feature_5: "Moslashtirish va ogohlantirishlar",
+              feature_6: "Reklama yo'q",
+              button: "Rejani tanlang",
+            },
+          },
+          reviews: {
+            title: "Fikrlar",
+            head: "Biz haqimizda nima deyishadi",
+          },
         },
       },
       ru: {
@@ -111,6 +149,44 @@ i18n
               "Присоединяйтесь к нам и почувствуйте разницу, которую может сделать преданный своему делу и профессиональный торговый партнер.",
             button: "Присоединяйся сейчас",
           },
+          products: {
+            span: "Продукты",
+            title: "Курсы трейдинга",
+            title2: "Помощь роботов",
+            subtitle:
+              "Раскройте свой финансовый потенциал: научитесь торговать с уверенностью и навыками с помощью комплексных курсов, адаптированных как для начинающих, так и для опытных трейдеров.",
+            button: "Подробнее",
+          },
+          signals: {
+            title: "Сигналы",
+            free: {
+              title: "Бесплатно",
+              price: "$0",
+              feature_1: "Основные сигналы",
+              feature_2: "Простые графики и индикаторы",
+              feature_3: "Базовые уроки и руководства",
+              feature_4: "Участие в общественных форумах или группах",
+              feature_5: "Настройка и оповещения",
+              feature_6: "Нет рекламы",
+              button: "Выберите план",
+            },
+            premium: {
+              title: "Премиум",
+              price: "$100",
+              feature_1: "Неограниченные сигналы",
+              feature_2: "Инструменты расширенного анализа",
+              feature_3: "Расширенные руководства, курсы и вебинары",
+              feature_4:
+                "Доступ к премиум-форумам, чатам и функциям социального трейдинга.",
+              feature_5: "Настройка и оповещения",
+              feature_6: "Нет рекламы",
+              button: "Выберите план",
+            },
+          },
+          reviews: {
+            title: "Отзывы",
+            head: "Что они говорят о нас",
+          },
         },
       },
       en: {
@@ -158,6 +234,44 @@ i18n
             subtitle3:
               "Join us and experience the difference that a dedicated and professional trading partner can make.",
             button: "Join Now",
+          },
+          products: {
+            span: "Products",
+            title: "Trading Courses",
+            title2: "Robots Help",
+            subtitle:
+              "Unlock Your Financial Potential: Learn to Trade with Confidence and Skill Through Comprehensive Courses Tailored for Beginners to Advanced Traders",
+            button: "Learn More",
+          },
+          signals: {
+            title: "Signals",
+            free: {
+              title: "Free",
+              price: "$0",
+              feature_1: "Basic signals",
+              feature_2: "Simple charts and indicators",
+              feature_3: "Basic tutorials and guides",
+              feature_4: "Participation in community forums or groups",
+              feature_5: "Customization and Alerts",
+              feature_6: "No Advertising",
+              button: "Choose Plan",
+            },
+            premium: {
+              title: "Premium",
+              price: "$100",
+              feature_1: "Unlimited Signals",
+              feature_2: "Advanced Analysis Tools",
+              feature_3: "Advanced tutorials, courses, and webinars",
+              feature_4:
+                "Access to premium forums, chat rooms, and social trading features",
+              feature_5: "Customization and Alerts",
+              feature_6: "No Advertising",
+              button: "Choose Plan",
+            },
+          },
+          reviews: {
+            title: "Reviews",
+            head: "What They Say About Us",
           },
         },
       },

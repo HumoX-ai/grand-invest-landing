@@ -26,16 +26,22 @@ const AboutUs = () => {
         animate={isInView ? { opacity: 1, x: 0 } : {}}
         transition={{ duration: 1, delay: 1 }}
       >
-        <span className="px-4 py-1 bg-[#EA9C14] rounded-md">
+        <span className="px-4 py-1 bg-gradient-light-right rounded-md">
           {t("aboutUs.whatwedo")}
         </span>
-        <h1 className="py-5 text-4xl lg:text-5xl font-medium text-[#EA9C14]">
+        <h1 className="py-4 text-4xl lg:text-5xl font-medium gradient-text-light">
           {t("aboutUs.title")}
         </h1>
-        <p className="pt-3 pb-4">{t("aboutUs.subtitle")}</p>
-        <p className="py-4">{t("aboutUs.subtitle2")}</p>
-        <p className="py-4">{t("aboutUs.subtitle3")}</p>
-        <Button className="bg-[#EA9C14] hover:bg-[#EA9C14] px-8 rounded-3xl">
+        <p className="pt-3 pb-4 text-[#1f2c39] dark:text-[#f0f0f0]">
+          {t("aboutUs.subtitle")}
+        </p>
+        <p className="py-4 text-[#1f2c39] dark:text-[#f0f0f0]">
+          {t("aboutUs.subtitle2")}
+        </p>
+        <p className="py-4 text-[#1f2c39] dark:text-[#f0f0f0]">
+          {t("aboutUs.subtitle3")}
+        </p>
+        <Button className="bg-gradient-light-right px-8 rounded-3xl mt-4">
           {t("aboutUs.button")}
         </Button>
       </motion.div>

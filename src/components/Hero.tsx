@@ -39,7 +39,7 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 2, ease: "easeInOut" }}
           >
-            <Button className="bg-[#EA9C14] hover:bg-[#EA9C14] px-8 rounded-3xl">
+            <Button className="bg-gradient-light-right px-8 rounded-3xl">
               {t("hero.button")}
             </Button>
           </motion.div>
