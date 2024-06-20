@@ -5,6 +5,7 @@ import Products from "@/components/Products";
 import Signals from "@/components/Signals";
 import Reviews from "@/components/Reviews";
 import MobileApp from "@/components/MobileApp";
+import ContactUs from "@/components/ContactUs";
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
       <Signals />
       <Reviews />
       <MobileApp />
+      <ContactUs />
     </div>
   );
 };

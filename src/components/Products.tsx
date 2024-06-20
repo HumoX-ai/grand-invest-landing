@@ -43,7 +43,7 @@ const Products = () => {
           </div>
         </Parallax>
         <Parallax
-          translateY={[-50, 5]}
+          translateY={[-30, 5]}
           speed={100}
           className="bg-gradient-to-r from-[#ea9c14] to-[#ffd765]"
         >

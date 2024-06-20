@@ -7,7 +7,7 @@ const Hero = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="mt-14">
+    <div className="mt-14 mb-28">
       <div className="h-[calc(100vh-10rem)] grid items-center grid-cols-1 md:grid-cols-2 gap-4">
         <motion.div
           className="w-full xl:w-10/12 order-last xl:order-first text-center md:text-start"
@@ -21,7 +21,7 @@ const Hero = () => {
             typeSpeed={50}
             typedRef={function noRefCheck() {}}
             // loop
-            className="text-4xl lg:text-5xl font-medium text-center"
+            className="text-3xl lg:text-5xl font-medium text-center"
           />
           <motion.div
             initial={{ opacity: 0 }}
