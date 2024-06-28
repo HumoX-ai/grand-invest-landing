@@ -1,9 +1,9 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
-import { Button } from "./ui/button";
 import { useTranslation } from "react-i18next";
+import CustomButton from "./CustomButton";
 
-const AboutUs = () => {
+const AboutUsComponent = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false });
   const { t } = useTranslation();
@@ -41,12 +41,10 @@ const AboutUs = () => {
         <p className="py-4 text-[#1f2c39] dark:text-[#f0f0f0]">
           {t("aboutUs.subtitle3")}
         </p>
-        <Button className="bg-gradient-light-right px-8 rounded-3xl mt-4">
-          {t("aboutUs.button")}
-        </Button>
+        <CustomButton href="/signup" title={t("aboutUs.button")} />
       </motion.div>
     </div>
   );
 };
 
-export default AboutUs;
+export default AboutUsComponent;

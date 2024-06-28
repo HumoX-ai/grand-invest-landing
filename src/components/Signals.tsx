@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
-import { Button } from "./ui/button";
 import { Card, CardContent, CardFooter, CardHeader } from "./ui/card";
+import CustomButton from "./CustomButton";
 
 const Signals = () => {
   const { t } = useTranslation();
@@ -90,7 +90,7 @@ const Signals = () => {
   ];
 
   return (
-    <div className="bg-[url('/signals-bg.svg')] bg-contain bg-center bg-no-repeat flex justify-center items-center min-h-screen py-24">
+    <div className="bg-[url('/signals-bg.svg')] bg-contain bg-center bg-white dark:bg-[#041628] bg-no-repeat flex justify-center items-center min-h-screen py-24">
       <div>
         <span className="px-4 py-1 bg-gradient-light-right rounded-md">
           {t("signals.title")}
@@ -112,10 +112,12 @@ const Signals = () => {
                   </div>
                 ))}
               </CardContent>
-              <CardFooter>
-                <Button className={plan.buttonClass}>
-                  {t("signals.free.button")}
-                </Button>
+              <CardFooter className=" w-full flex items-center justify-center mx-auto">
+                <CustomButton
+                  href="/signup"
+                  title={t("signals.free.button")}
+                  className="mx-auto"
+                />
               </CardFooter>
             </Card>
           ))}

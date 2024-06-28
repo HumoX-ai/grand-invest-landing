@@ -65,8 +65,8 @@ const Reviews = () => {
   };
 
   return (
-    <div className="bg-[url('/reviews_bg.svg')] dark:bg-none dark:bg-[#001121] bg-no-repeat bg-center bg-contain w-full">
-      <div className="py-24 w-full px-6 md:px-12 2xl:px-[140px]">
+    <div className="bg-[url('/reviews_bg.svg')] dark:bg-none dark:bg-[#041628] bg-no-repeat bg-center bg-contain w-full">
+      <div className="py-24 w-full px-6 md:px-12 2xl:px-[140px] max-w-[2000px] mx-auto">
         <span className="px-4 py-1 bg-gradient-light-right rounded-md">
           {t("reviews.title")}
         </span>

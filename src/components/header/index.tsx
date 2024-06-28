@@ -1,4 +1,4 @@
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -20,7 +20,7 @@ import {
 import { Button } from "../ui/button";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent } from "../ui/sheet";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Accordion,
   AccordionContent,
@@ -28,6 +28,7 @@ import {
   AccordionTrigger,
 } from "../ui/accordion";
 import { motion } from "framer-motion";
+import CustomButton from "../CustomButton";
 
 interface NavItemProps {
   to: string;
@@ -54,6 +55,28 @@ const NavItem = ({
 const Header = () => {
   const [open, setOpen] = useState(false);
   const { t, i18n } = useTranslation();
+  const [isVisible, setIsVisible] = useState(true);
+  const [prevScrollPos, setPrevScrollPos] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.scrollY;
+
+      if (currentScrollPos > prevScrollPos) {
+        setIsVisible(false); // pastga scroll qilganda header yoqoladi
+      } else {
+        setIsVisible(true); // yuqoriga scroll qilganda header ko'rinadi
+      }
+
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, [prevScrollPos]);
 
   const navItems = [
     { to: "/", label: t("header.home") },
@@ -83,7 +106,9 @@ const Header = () => {
 
   return (
     <motion.div
-      className="pt-4 flex items-center justify-between px-6 md:px-12 2xl:px-[140px]"
+      className={`py-2 flex items-center justify-between px-6 md:px-12 2xl:px-[140px] max-w-[2000px] mx-auto ${
+        isVisible ? "top-0" : "-top-20"
+      } sticky z-[9999] bg-[#F0F0F5] dark:bg-[#041628] transition-all duration-300`}
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
@@ -93,7 +118,9 @@ const Header = () => {
         onClick={() => setOpen(!open)}
         size={28}
       />
-      <img src="/logo.svg" alt="Logo" className="h-10 md:h-full" />
+      <Link to={"/"}>
+        <img src="/logo.svg" alt="Logo" className="h-10 md:h-full" />
+      </Link>
       <NavigationMenu className="hidden xl:flex">
         <NavigationMenuList className="flex gap-4">
           {navItems.map((item) => (
@@ -190,26 +217,26 @@ const Header = () => {
           }}
         >
           <SelectTrigger
-            className="w-fit flex justify-center items-center px-0"
+            className="w-fit flex justify-center items-center px-0 focus:ring-0 focus:ring-ring focus:ring-offset-0"
             defaultValue={"uz"}
           >
             <SelectValue placeholder="Language" />
           </SelectTrigger>
-          <SelectContent>
+          <SelectContent className="mt-4">
             <SelectItem value="uz">
-              <div className="flex gap-2 items-center justify-center">
+              <div className="flex gap-2 items-center px-2">
                 <img src="/uz.svg" alt="Uzbek" className="w-6 h-6" />
                 <p>uz</p>
               </div>
             </SelectItem>
             <SelectItem value="ru">
-              <div className="flex gap-2 items-center justify-center">
+              <div className="flex gap-2 items-center px-2">
                 <img src="/ru.svg" alt="Russian" className="w-6 h-6" />
                 <p>ru</p>
               </div>
             </SelectItem>
             <SelectItem value="en">
-              <div className="flex gap-2 items-center justify-center">
+              <div className="flex gap-2 items-center px-2">
                 <img src="/en.svg" alt="English" className="w-6 h-6" />
                 <p>en</p>
               </div>
@@ -217,12 +244,10 @@ const Header = () => {
           </SelectContent>
         </Select>
 
-        <Button className="bg-gradient-light-right px-8 rounded-3xl hidden xl:flex">
-          {t("header.login")}
-        </Button>
+        <CustomButton href="/login" title={t("header.login")} hidden />
       </div>
       <Sheet open={open} onOpenChange={setOpen}>
-        <SheetContent className="xl:hidden" side="left">
+        <SheetContent className="xl:hidden mt-12 md:mt-16 z-50" side="left">
           <div className="absolute top-1 left-4">
             <ModeToggle />
           </div>

@@ -5,7 +5,7 @@ const Footer = () => {
         <div className="flex flex-col gap-6">
           <div className="flex items-center justify-center md:justify-start">
             <a href="#">
-              <img className="" src="/logo.svg" alt="logo" />
+              <img className="pb-8 lg:pb-0" src="/logo.svg" alt="logo" />
             </a>
           </div>
           <div className="hidden xl:block">
@@ -26,11 +26,6 @@ const Footer = () => {
             <li>
               <a className="no-underline" href="#">
                 <img src="/youtube.svg" alt="youtube" />
-              </a>
-            </li>
-            <li>
-              <a className="no-underline" href="#">
-                <img src="/call.svg" alt="call" />
               </a>
             </li>
           </ul>
@@ -128,10 +123,14 @@ const Footer = () => {
           </div>
           <div className="flex flex-col gap-10">
             <div className="block xl:hidden">
-              <p className="text-sm/[24px] font-normal">+998991234567</p>
-              <p className="text-sm/[20px] font-light">
-                grand_invest@gmail.com
-              </p>
+              <a href="tel:+998991234567">
+                <p className="text-sm/[24px] font-normal">+998991234567</p>
+              </a>
+              <a href="mailto:grand_invest@gmail">
+                <p className="text-sm/[20px] font-light">
+                  grand_invest@gmail.com
+                </p>
+              </a>
             </div>
             <ul className="flex xl:hidden items-center justify-center gap-5">
               <li>
@@ -147,11 +146,6 @@ const Footer = () => {
               <li>
                 <a className="no-underline" href="#">
                   <img src="/youtube.svg" alt="youtube" />
-                </a>
-              </li>
-              <li>
-                <a className="no-underline" href="#">
-                  <img src="/call.svg" alt="call" />
                 </a>
               </li>
             </ul>

@@ -35,8 +35,6 @@ export default function ExchangeRate() {
     fetchData();
   }, []);
 
-  console.log(data);
-
   return (
     <div>
       <div className="w-full bg-[#041628] text-whitem mt-4">
@@ -45,9 +43,8 @@ export default function ExchangeRate() {
           spaceBetween={0}
           freeMode={true}
           autoplay={{
-            delay: 0,
-            disableOnInteraction: false, // Ensure autoplay doesn't stop on interaction
-            pauseOnMouseEnter: false, // Ensure autoplay doesn't pause on mouse enter
+            delay: 3000,
+            disableOnInteraction: false,
           }}
           speed={3000} // Adjust speed to your liking
           loop={true}
@@ -56,7 +53,6 @@ export default function ExchangeRate() {
             0: {
               slidesPerView: 1,
             },
-
             768: {
               slidesPerView: 2,
             },
@@ -64,7 +60,7 @@ export default function ExchangeRate() {
               slidesPerView: 3,
             },
             1200: {
-              slidesPerView: 4,
+              slidesPerView: 3,
             },
             1536: {
               slidesPerView: 5,
@@ -74,12 +70,8 @@ export default function ExchangeRate() {
         >
           {data.map((coin) => (
             <SwiperSlide key={coin.id}>
-              <div className="pt-2 rounded-md flex items-center justify-center gap-3 text-center text-white">
-                <img
-                  src={coin.image}
-                  alt={coin.name}
-                  className="w-10 h-10 mb-2"
-                />
+              <div className="pt-2 rounded-md flex items-center justify-center gap-3 text-center text-white pb-2">
+                <img src={coin.image} alt={coin.name} className="w-10 h-10" />
                 <h3 className="text-lg font-semibold">
                   {coin.name.length > 10 ? coin.name.slice(0, 10) : coin.name}
                 </h3>
@@ -99,7 +91,7 @@ export default function ExchangeRate() {
           ))}
         </Swiper>
       </div>
-      <div className="bg-[url('/exchange_bg.png')] py-4 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 px-6 md:px-12 2xl:px-[140px] text-center gap-6 text-white items-center">
+      <div className="bg-[url('/exchange_bg.png')] bg-no-repeat bg-cover py-4 grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 px-6 md:px-12 2xl:px-[140px] text-center gap-6 text-white items-center">
         <div className="col-span-1">
           <h1 className="text-4xl lg:text-4xl font-medium">$ 2 000 000</h1>
           <p className="pt-1">{t("exChangeRate.title1")}</p>

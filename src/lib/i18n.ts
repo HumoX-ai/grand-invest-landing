@@ -111,6 +111,33 @@ i18n
             phone: "Telefon raqami",
             whereHeard: "Grand Invest haqida qayerdan eshitgansiz?",
           },
+
+          categories: {
+            all: "Barchasi",
+            signals: "Signallar",
+            learningTrading: "Tajribani oshirish",
+            robots: "Robotlar",
+          },
+          downloads: {
+            title: "Grand Invest har doim yordam berishga tayyor",
+            subtitle:
+              "Savdo yo'lingizni muhim manbalar va eksklyuziv ma'lumotlar bilan kengaytiring",
+            files: "Fayllar",
+            inputPlaceholder: "Barcha fayllarni qidirish...",
+            button: "Yuklab olish",
+          },
+          exchangeRate: {
+            title: "Valyuta kurslari",
+            subtitle:
+              "Haqiqiy vaqtda valyuta kurslari, bozor tendentsiyalari va keng qamrovli tahliliy vositalar",
+            convert: "Valyuta konvertori",
+            convertButton: "Konvertatsiya qilish",
+            currencyRate: "Valyuta kursi",
+            currency: "valyuta",
+            purchase: "sotib olish",
+            change: "o'zgarish",
+            loadMoreButton: "Ko'proq yuklash",
+          },
         },
       },
       ru: {
@@ -207,6 +234,32 @@ i18n
             phone: "Номер телефона",
             whereHeard: "Откуда вы услышали о Гранд Инвест?",
           },
+          categories: {
+            all: "Все",
+            signals: "Сигналы",
+            learningTrading: "Обучающие трейдинг",
+            robots: "Роботы",
+          },
+          downloads: {
+            title: "Гранд Инвест всегда готов помочь",
+            subtitle:
+              "Расширение возможностей вашего торгового пути с помощью необходимых ресурсов и эксклюзивной информации",
+            files: "Файлы",
+            inputPlaceholder: "Искать все файлы...",
+            button: "Скачать",
+          },
+          exchangeRate: {
+            title: "Курсы валют",
+            subtitle:
+              "RКурсы обмена валют в режиме реального времени, рыночные тенденции и комплексные аналитические инструменты",
+            convert: "Конвертер валют",
+            convertButton: "Конвертировать",
+            currencyRate: "Курс валюты",
+            currency: "валюта",
+            purchase: "покупка",
+            change: "изменение",
+            loadMoreButton: "Загрузи больше",
+          },
         },
       },
       en: {
@@ -302,6 +355,32 @@ i18n
             email: "Email",
             phone: "Phone Number",
             whereHeard: "Where you heard about Grand Invest?",
+          },
+          categories: {
+            all: "All",
+            signals: "Signals",
+            learningTrading: "Learning Trading",
+            robots: "Robots",
+          },
+          downloads: {
+            title: "Grand Invest is always ready to help",
+            subtitle:
+              "Empowering Your Trading Journey with Essential Resources and Exclusive Insights",
+            files: "Files",
+            inputPlaceholder: "Search all files...",
+            button: "Download",
+          },
+          exchangeRate: {
+            title: "Exchange Rates",
+            subtitle:
+              "Real-Time Currency Exchange Rates, Market Trends, and Comprehensive Analytical Tools",
+            convert: "Currency Converter",
+            convertButton: "Convert",
+            currencyRate: "Currency Rate",
+            currency: "currency",
+            purchase: "purchase",
+            change: "change",
+            loadMoreButton: "Load More",
           },
         },
       },

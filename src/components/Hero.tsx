@@ -1,14 +1,14 @@
 import { useTranslation } from "react-i18next";
 import { ReactTyped } from "react-typed";
 import { motion } from "framer-motion";
-import { Button } from "./ui/button";
+import CustomButton from "./CustomButton";
 
 const Hero = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="mt-14 mb-28">
-      <div className="h-[calc(100vh-10rem)] grid items-center grid-cols-1 md:grid-cols-2 gap-4">
+    <div className="mt-16 mb-28 overflow-x-hidden">
+      <div className=" grid items-center grid-cols-1 md:grid-cols-2 gap-4">
         <motion.div
           className="w-full xl:w-10/12 order-last xl:order-first text-center md:text-start"
           initial={{ x: "-100vw", opacity: 0 }}
@@ -39,9 +39,7 @@ const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 2, ease: "easeInOut" }}
           >
-            <Button className="bg-gradient-light-right px-8 rounded-3xl">
-              {t("hero.button")}
-            </Button>
+            <CustomButton href="/signup" title={t("hero.button")} />
           </motion.div>
         </motion.div>
         <motion.div
