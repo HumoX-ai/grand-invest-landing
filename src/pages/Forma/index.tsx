@@ -130,7 +130,7 @@ const Forma = () => {
                     </FormItem>
                   )}
                 />
-                <div className="flex flex-col lg:flex-row gap-4">
+                <div className="flex flex-col-reverse lg:flex-row gap-4">
                   <FormField
                     control={form.control}
                     name="product_id"
