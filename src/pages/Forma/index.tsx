@@ -22,6 +22,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { useSearchParams } from "react-router-dom";
+import InputMask from "react-input-mask";
 
 const formSchema = z.object({
   full_name: z.string().min(2, {
@@ -29,7 +30,11 @@ const formSchema = z.object({
   }),
   phone_number: z
     .string()
-    .min(9, { message: "Telefon raqamingizni to'ldiring" }),
+    .min(17, { message: "Phone number must be at least 12 characters." }) // Minimal uzunlikni tekshirish
+    .max(17, { message: "Phone number must be at most 12 characters." }) // Maksimal uzunlikni tekshirish
+    .regex(/^\+998 \d{2} \d{3}-\d{2}-\d{2}$/, {
+      message: "Invalid phone number format.",
+    }),
   product_id: z.string({ message: "Kategoriyani tanlang" }).min(1, {
     message: "Kategoriyani tanlang",
   }),
@@ -54,6 +59,7 @@ const Forma = () => {
   function onSubmit(values: z.infer<typeof formSchema>) {
     const payload = {
       ...values,
+      product: "Yaxshi",
       from_person: "grand_invest",
       from_source,
     };
@@ -63,16 +69,16 @@ const Forma = () => {
     fetch("http://64.226.72.1:8000/api/contact_us/", {
       method: "POST",
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/x-www-form-urlencoded",
       },
-      body: JSON.stringify(payload),
+      body: new URLSearchParams(payload).toString(),
     })
       .then(() => {
         setSubmitted(true);
-        alert("Submitted!");
       })
       .catch(() => {
-        setSubmitted(true);
+        setSubmitted(false);
+        alert("Xatolik yuz berdi. Iltimos qayta urunib ko'ring");
       });
   }
 
@@ -80,12 +86,18 @@ const Forma = () => {
     <div className="w-full h-screen flex items-center justify-center px-4">
       <div className="bg-white dark:bg-[#0F2438] py-8 px-7 rounded-lg">
         {submitted ? (
-          <Lottie
-            loop
-            animationData={animationData}
-            play
-            style={{ width: 150, height: 150 }}
-          />
+          <div className="flex flex-col items-center">
+            <Lottie
+              loop
+              animationData={animationData}
+              play
+              style={{ width: 150, height: 150 }}
+            />
+            <p className="mt-8 text-[#7D8A98] max-w-96 text-center">
+              Arizangiz muvaffaqiyatli yuborildi. Tez orada siz bilan
+              bo'g'lanamiz.
+            </p>
+          </div>
         ) : (
           <>
             <img src="/logo.svg" className="mx-auto" alt="" />
@@ -140,6 +152,9 @@ const Forma = () => {
                             <SelectItem value="Kurs | Online | VIP">
                               Kurs | Online | VIP
                             </SelectItem>
+                            <SelectItem value="Kurs | Online | PRO">
+                              Kurs | Online | PRO
+                            </SelectItem>
                             <SelectItem value="Prof | NFT">
                               Prof | NFT
                             </SelectItem>
@@ -166,7 +181,14 @@ const Forma = () => {
                       <FormItem className="w-full">
                         <FormLabel>Telefon raqam</FormLabel>
                         <FormControl>
-                          <Input placeholder="Telefon raqam" {...field} />
+                          <InputMask
+                            className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                            mask="+999 99 999-99-99"
+                            maskChar={null}
+                            placeholder="+998 99 999-99-99"
+                            value={field.value}
+                            onChange={field.onChange}
+                          />
                         </FormControl>
                         <FormMessage />
                       </FormItem>

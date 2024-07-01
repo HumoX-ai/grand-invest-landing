@@ -11,6 +11,7 @@ import Contacts from "./pages/Contacts";
 import ExchangeRates from "./pages/ExchangeRates";
 import Robots from "./pages/Robots";
 import Forma from "./pages/Forma";
+import Register from "./pages/Register";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
       <ParallaxProvider>
         <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme">
           <Routes>
+            <Route path="/register" element={<Register />} />
             <Route path="/" element={<RootLayout />}>
               <Route index element={<Home />} />
               <Route path="/about-us" element={<AboutUs />} />

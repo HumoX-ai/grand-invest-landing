@@ -2,8 +2,10 @@ import ContactUs from "@/components/ContactUs";
 import CustomButton from "@/components/CustomButton";
 import Reviews from "@/components/Reviews";
 import { Button } from "@/components/ui/button";
+import { useTranslation } from "react-i18next";
 
 const Robots = () => {
+  const { t } = useTranslation();
   return (
     <div>
       <div className="dark:bg-[url('/bg-products-dark.svg')] bg-no-repeat lg:bg-cover h-[calc(100vh-80px)]">
@@ -14,18 +16,14 @@ const Robots = () => {
                 Products
               </span>
               <h1 className="text-4xl lg:text-5xl gradient-text-light mt-8 font-medium">
-                TOP G - Scalpel
+                {t("robots.title")}
               </h1>
-              <p className="py-8">
-                Unlock Your Financial Potential: Learn to Trade with Confidence
-                and Skill Through Comprehensive Courses Tailored for Beginners
-                to Advanced Traders
-              </p>
+              <p className="py-8">{t("robots.description")}</p>
               <Button
                 className="rounded-xl border border-[#2C353E] dark:bg-[#F0F0F0] dark:text-black flex items-center gap-3 mx-auto lg:mx-0"
                 variant="outline"
               >
-                Go to purchase
+                {t("robots.button")}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="12"
@@ -48,7 +46,7 @@ const Robots = () => {
           </div>
         </div>
       </div>
-      <div className="container-custom ">
+      <div className="container-custom  mt-72 lg:mt-0">
         <iframe
           className="w-full h-[calc(100vh-80px)]"
           src="https://www.youtube-nocookie.com/embed/mlAMg5YTP3U?si=TYi6eJfdAc3cMYsp"
@@ -65,16 +63,10 @@ const Robots = () => {
               <img src="/robots_2.svg" alt="" />
             </div>
             <div className="text-center lg:text-start">
-              <p className="py-8">
-                Discover the future of trading with our advanced trading robots.
-                Designed to operate 24/7, these robots eliminate emotional
-                decision-making and execute trades based on backtested and
-                optimized strategies, ensuring maximum efficiency and
-                profitability.
-              </p>
+              <p className="py-8">{t("robots.description2")}</p>
               <CustomButton
                 href="#"
-                title="Learn More"
+                title={t("robots.button2")}
                 className="mx-auto lg:mx-0"
               />
             </div>

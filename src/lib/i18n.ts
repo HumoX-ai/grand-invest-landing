@@ -11,7 +11,6 @@ i18n
   // init i18next
   // for all options read: https://www.i18next.com/overview/configuration-options
   .init({
-    debug: true,
     fallbackLng: "uz",
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
@@ -138,6 +137,15 @@ i18n
             change: "o'zgarish",
             loadMoreButton: "Ko'proq yuklash",
           },
+          robots: {
+            title: "TOP G - Scalpel",
+            description:
+              "Moliyaviy salohiyatingizni oching: yangi boshlanuvchilar va ilg'or treyderlar uchun mo'ljallangan keng qamrovli kurslar orqali ishonch va mahorat bilan savdo qilishni o'rganing.",
+            button: "Xarid qilish uchun o'ting",
+            description2:
+              "Bizning ilg'or savdo robotlarimiz bilan savdo kelajagini kashf eting. 24/7 ishlash uchun mo'ljallangan ushbu robotlar hissiy qarorlar qabul qilishni bartaraf qiladi va qayta sinovdan o'tgan va optimallashtirilgan strategiyalar asosida savdolarni amalga oshiradi, maksimal samaradorlik va rentabellikni ta'minlaydi.",
+            button2: "Batafsil ma'lumot",
+          },
         },
       },
       ru: {
@@ -260,6 +268,15 @@ i18n
             change: "изменение",
             loadMoreButton: "Загрузи больше",
           },
+          robots: {
+            title: "ТОП G — Скальпер",
+            description:
+              "Раскройте свой финансовый потенциал: научитесь торговать с уверенностью и навыками с помощью комплексных курсов, адаптированных как для начинающих, так и для опытных трейдеров.",
+            button: "Перейти к покупке",
+            description2:
+              "Откройте для себя будущее торговли с нашими передовыми торговыми роботами. Эти роботы, предназначенные для работы круглосуточно и без выходных, исключают эмоциональное принятие решений и совершают сделки на основе проверенных и оптимизированных стратегий, обеспечивая максимальную эффективность и прибыльность.",
+            button2: "Узнать больше",
+          },
         },
       },
       en: {
@@ -381,6 +398,15 @@ i18n
             purchase: "purchase",
             change: "change",
             loadMoreButton: "Load More",
+          },
+          robots: {
+            title: "TOP G - Scalpel",
+            description:
+              "Unlock Your Financial Potential: Learn to Trade with Confidence and Skill Through Comprehensive Courses Tailored for Beginners to Advanced Traders",
+            button: "Go to purchase",
+            description2:
+              "Discover the future of trading with our advanced trading robots. Designed to operate 24/7, these robots eliminate emotional decision-making and execute trades based on backtested and optimized strategies, ensuring maximum efficiency and profitability.",
+            button2: "Learn More",
           },
         },
       },
