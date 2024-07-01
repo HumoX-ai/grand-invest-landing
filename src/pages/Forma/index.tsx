@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Lottie from "react-lottie-player";
 import animationData from "../../../anim/animation.json";
 import CustomButton from "@/components/CustomButton";
@@ -23,27 +23,20 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { useSearchParams } from "react-router-dom";
 import InputMask from "react-input-mask";
+import axios from "axios";
+import { formSchema } from "./formSchema";
 
-const formSchema = z.object({
-  full_name: z.string().min(2, {
-    message: "Ismingiz kamida 3 ta belgidan iborat bo'lishi kerak",
-  }),
-  phone_number: z
-    .string()
-    .min(17, { message: "Phone number must be at least 12 characters." }) // Minimal uzunlikni tekshirish
-    .max(17, { message: "Phone number must be at most 12 characters." }) // Maksimal uzunlikni tekshirish
-    .regex(/^\+998 \d{2} \d{3}-\d{2}-\d{2}$/, {
-      message: "Invalid phone number format.",
-    }),
-  product_id: z.string({ message: "Kategoriyani tanlang" }).min(1, {
-    message: "Kategoriyani tanlang",
-  }),
-});
+interface IFormValues {
+  id: number;
+  title: string;
+  tag: string;
+}
 
 const Forma = () => {
   const [searchParams] = useSearchParams();
-  const from_source = searchParams.get("source") || "";
   const [submitted, setSubmitted] = useState(false);
+  const [products, setProducts] = useState<IFormValues[] | null>([]); // ["Robot | Grand Invest TOP V1.1", "Robot | Grand Invest TOP V2.1", "Kurs | Offline", "Kurs | Online | VIP", "Kurs | Online | PRO", "Prof | NFT", "PROP | RUCHNOY", "Boshqa", "Kurs | Onlayn | START", "Kurs | Professional Online"
+  const from_source = searchParams.get("source") || "";
 
   // 1. Define your form.
   const form = useForm<z.infer<typeof formSchema>>({
@@ -81,6 +74,20 @@ const Forma = () => {
         alert("Xatolik yuz berdi. Iltimos qayta urunib ko'ring");
       });
   }
+
+  useEffect(() => {
+    const fetchProducts = async () => {
+      const response = await axios.get("http://64.226.72.1:8000/api/product/", {
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "",
+        },
+      });
+      setProducts(response.data.results);
+    };
+
+    fetchProducts();
+  }, []);
 
   return (
     <div className="w-full h-screen flex items-center justify-center px-4">
@@ -129,45 +136,26 @@ const Forma = () => {
                     name="product_id"
                     render={({ field }) => (
                       <FormItem className="w-full">
-                        <FormLabel>Kategoriya</FormLabel>
+                        <FormLabel>Qiziqish</FormLabel>
                         <Select
                           onValueChange={field.onChange}
                           defaultValue={field.value}
                         >
                           <FormControl>
-                            <SelectTrigger>
+                            <SelectTrigger className="focus:ring-offset-0">
                               <SelectValue placeholder="Kategoriyani tanlang..." />
                             </SelectTrigger>
                           </FormControl>
                           <SelectContent>
-                            <SelectItem value="Robot | Grand Invest TOP V1.1">
-                              Robot | Grand Invest TOP V1.1
-                            </SelectItem>
-                            <SelectItem value="Robot | Grand Invest TOP V2.1">
-                              Robot | Grand Invest TOP V2.1
-                            </SelectItem>
-                            <SelectItem value="Kurs | Offline">
-                              Kurs | Offline
-                            </SelectItem>
-                            <SelectItem value="Kurs | Online | VIP">
-                              Kurs | Online | VIP
-                            </SelectItem>
-                            <SelectItem value="Kurs | Online | PRO">
-                              Kurs | Online | PRO
-                            </SelectItem>
-                            <SelectItem value="Prof | NFT">
-                              Prof | NFT
-                            </SelectItem>
-                            <SelectItem value="PROP | RUCHNOY">
-                              PROP | RUCHNOY
-                            </SelectItem>
-                            <SelectItem value="Boshqa">Boshqa</SelectItem>
-                            <SelectItem value="Kurs | Onlayn | START">
-                              Kurs | Onlayn | START
-                            </SelectItem>
-                            <SelectItem value="Kurs | Professional Online">
-                              Kurs | Professional Online
-                            </SelectItem>
+                            {products?.map((product) => (
+                              <SelectItem
+                                className="px-2"
+                                key={product.id}
+                                value={product.title}
+                              >
+                                {product.title}
+                              </SelectItem>
+                            ))}
                           </SelectContent>
                         </Select>
                         <FormMessage />
@@ -183,7 +171,7 @@ const Forma = () => {
                         <FormControl>
                           <InputMask
                             className="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
-                            mask="+999 99 999-99-99"
+                            mask="+999999999999"
                             maskChar={null}
                             placeholder="+998 99 999-99-99"
                             value={field.value}
