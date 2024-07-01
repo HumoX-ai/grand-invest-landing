@@ -126,8 +126,6 @@
   background: linear-gradient(to right, #ea9c14, #ffd765);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  transition: background 0.3s ease, -webkit-background-clip 0.3s ease,
-    -webkit-text-fill-color 0.3s ease;
 }
 
 /* .gradient-text-light:hover {

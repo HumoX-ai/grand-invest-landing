@@ -17,7 +17,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from "../ui/select";
-import { Button } from "../ui/button";
 import { Menu } from "lucide-react";
 import { Sheet, SheetContent } from "../ui/sheet";
 import { useEffect, useState } from "react";
@@ -244,7 +243,7 @@ const Header = () => {
           </SelectContent>
         </Select>
 
-        <CustomButton href="/login" title={t("header.login")} hidden />
+        <CustomButton href="/register" title={t("header.login")} hidden />
       </div>
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetContent className="xl:hidden mt-12 md:mt-16 z-50" side="left">
@@ -317,9 +316,12 @@ const Header = () => {
               </div>
             ))}
           </div>
-          <Button className="bg-gradient-light px-8 rounded-3xl xl:hidden flex w-full mt-6">
-            {t("header.login")}
-          </Button>
+
+          <CustomButton
+            href="/register"
+            title={t("header.login")}
+            className="w-full mt-6 px-8 rounded-3xl xl:hidden"
+          />
         </SheetContent>
       </Sheet>
     </motion.div>
