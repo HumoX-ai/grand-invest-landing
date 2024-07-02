@@ -75,7 +75,7 @@ const ContactUs = () => {
           <div className="px-4 py-1 bg-gradient-to-l from-[rgb(44,53,62)] to-[#344954] w-fit rounded-md text-[#EA9C14] mb-12 dark:from-[#ea9c14] dark:to-[#ffd765] dark:text-[#091929]">
             {t("contactus.title")}
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-stretch gap-10  text-white">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-stretch gap-10  ">
             <div className="py-8 px-4 lg:px-12 bg-[#071828] dark:bg-[#152737] flex flex-col gap-14 max-w-lg col-span-1 rounded-3xl">
               <div className="flex gap-6 items-center">
                 <img src="/support.svg" className="size-10 md:size-14" alt="" />
@@ -156,7 +156,7 @@ const ContactUs = () => {
                             defaultValue={field.value}
                           >
                             <FormControl>
-                              <SelectTrigger className="focus:ring-offset-0">
+                              <SelectTrigger className="focus:ring-offset-0 border">
                                 <SelectValue placeholder="Kategoriyani tanlang..." />
                               </SelectTrigger>
                             </FormControl>
