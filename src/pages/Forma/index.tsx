@@ -35,7 +35,7 @@ interface IFormValues {
 const Forma = () => {
   const [searchParams] = useSearchParams();
   const [submitted, setSubmitted] = useState(false);
-  const [products, setProducts] = useState<IFormValues[] | null>([]); // ["Robot | Grand Invest TOP V1.1", "Robot | Grand Invest TOP V2.1", "Kurs | Offline", "Kurs | Online | VIP", "Kurs | Online | PRO", "Prof | NFT", "PROP | RUCHNOY", "Boshqa", "Kurs | Onlayn | START", "Kurs | Professional Online"
+  const [products, setProducts] = useState<IFormValues[] | null>([]);
   const from_source = searchParams.get("source") || "";
 
   // 1. Define your form.
